@@ -96,7 +96,7 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 	margin-bottom: 25px;
 }
 .project p {
-	line-height: 1
+	line-height: 1.2;
 }
 
 .abstract {
@@ -106,3 +106,12 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 .abstract summary {
 	display: list-item;
 }
+
+.coauthors {
+	font-size: 10.5pt;
+	font-style: italic;
+  }
+
+.paper_title {
+	font-size: 13.5pt;
+  }
