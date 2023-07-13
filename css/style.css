@@ -93,7 +93,7 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 	font-family: 'Montserrat', Helvetica, sans-serif; }
 
 .project {
-	margin-bottom: 25px;
+	margin-bottom: 37px;
 }
 .project p {
 	line-height: 1.2;
@@ -110,12 +110,6 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 }
 
 .added_features {
-	font-size: 11pt;
-	margin-bottom: 5px;
-	margin-top: 5px;
-}
-
-.journal {
 	font-size: 11pt;
 	margin-bottom: 5px;
 	margin-top: 5px;
