@@ -102,6 +102,7 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 .abstract {
 	margin-bottom: 20px;
 	font-size: 11pt;
+	margin-left: 10px;
 }
 
 .abstract summary {
@@ -113,12 +114,14 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 	font-size: 11pt;
 	margin-bottom: 5px;
 	margin-top: 5px;
+	margin-left: 10px;
 }
 
 .coauthors {
 	font-size: 11pt;
 	font-style: italic;
 	margin-bottom: 5px;
+	margin-left: 10px;
 }
 
 .paper_title {
