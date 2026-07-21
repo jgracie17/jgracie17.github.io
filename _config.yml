@@ -1,2 +1,6 @@
 permalink: /notes/:year/:month/:day/:title
 markdown: kramdown
+
+# Keep the CV LaTeX source out of the published site (PDF is served from S3)
+exclude:
+  - cv/

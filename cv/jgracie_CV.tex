@@ -1,0 +1,137 @@
+%==============================================================================
+%  Jamie Gracie — Curriculum Vitae
+%------------------------------------------------------------------------------
+%  HOW TO EDIT
+%    * Each section starts with \cvsection{Section Title} (a full-width heading
+%      with a rule beneath), followed by its entries.
+%    * Start every entry with \hang so that if it wraps, the continuation is
+%      cleanly indented.  Separate entries with \par.
+%    * Use \entrygap for a blank-line gap between sub-entries; \newline to force
+%      a line break within one entry.
+%    * Co-authors: \coauth{with Benjamin Goldman} keeps the "(with ...)" together
+%      so it never splits mid-list.
+%    * To add an entry, copy an existing \hang ...\par line and edit the text.
+%
+%  HOW TO BUILD (produces jgracie_CV.pdf in this folder)
+%    pdflatex jgracie_CV.tex   (run twice so the layout settles)
+%    then upload with:  /upload-web cv/jgracie_CV.pdf
+%==============================================================================
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,margin=0.9in]{geometry}
+\usepackage{newtxtext}          % Times-like serif, matches the original CV
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+% --- Colors -----------------------------------------------------------------
+\definecolor{cvred}{RGB}{124,20,20}   % maroon used for the name & section dashes
+
+% --- Page footer:  -1-  -2-  (bottom right) ---------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\normalfont-\,\thepage\,-}
+
+% --- Layout parameters ------------------------------------------------------
+\setlength{\parindent}{0pt}
+\newcommand{\entryindent}{1.4em}  % indent applied to wrapped/continuation lines
+
+% --- Helper macros ----------------------------------------------------------
+% Section heading: black title-case text, marked with a leading maroon em-dash.
+\newcommand{\cvsection}[1]{%
+  \par\addvspace{12pt}%
+  {\Large\textcolor{cvred}{\textemdash}\ #1}\par
+  \nobreak\vspace{4pt}\nobreak}
+% Start of an entry: any wrapped continuation line is indented (hanging indent).
+\newcommand{\hang}{\hangindent=\entryindent\hangafter=1\relax}
+% A blank-line gap between sub-entries.
+\newcommand{\entrygap}{\par\addvspace{6pt}}
+% Small indent for degree lines under an institution.
+\newcommand{\sub}{\hspace*{\entryindent}}
+% Co-author list kept as one unbreakable unit (see note above).
+\newcommand{\coauth}[1]{\mbox{(#1)}}
+
+\begin{document}
+
+%------------------------------------------------------------------ Header ----
+{\fontsize{20}{24}\selectfont\scshape\color{cvred} Jamie Gracie}\\[4pt]
+{\color{cvred}\small
+  \href{mailto:jgracie@g.harvard.edu}{jgracie@g.harvard.edu}\\
+  Cell 562-343-4263\\
+  \href{https://www.jamiegracie.com}{www.jamiegracie.com}}\\[6pt]
+\rule{\textwidth}{0.4pt}
+
+%------------------------------------------------------------------ Body ------
+\raggedright   % left-aligned throughout (standard for CVs; avoids loose lines)
+
+\cvsection{Employment}
+\hang Postdoctoral Fellow, EdRedesign Lab, Harvard University, 2025--\par
+
+\cvsection{Affiliations}
+\hang Research Affiliate, Opportunity Insights, 2023--\par
+\hang Research Affiliate, EdRedesign Lab, 2023--\par
+
+\cvsection{Education}
+Harvard University\newline
+\sub Ph.D. Economics, 2025\entrygap
+Amherst College\newline
+\sub B.A., Economics and Spanish, \emph{summa cum laude}, 2017\par
+
+\cvsection{Publications}
+\hang ``Who Marries Whom? The Role of Segregation by Race and Class''
+\coauth{with Benjamin Goldman and Sonya Porter}\newline
+\textbf{\emph{American Economic Review}} (forthcoming)\par
+
+\cvsection{Working Papers}
+\hang ``When Resources Meet Relationships: The Returns to Personalized Supports for
+Low-Income Students'' \coauth{with Benjamin Goldman}\entrygap
+\hang ``Every Day Counts: Absenteeism and the Returns to Education in High-Poverty
+Schools'' \coauth{with Benjamin Goldman}\par
+
+\cvsection{Teaching}
+\hang Senior Thesis Seminar, Harvard College, Fall 2021--Spring 2022\par
+\hang Econometrics, Amherst College, teaching assistant for Caroline Theoharides, 2017\par
+
+\cvsection{Invited Seminars and Presentations}
+\hang \textit{2025--2026}: AEA Annual Meeting, Fife Applied Microeconomics Conference,
+University of Connecticut, Cornell University, UC Berkeley\par
+
+\cvsection{Fellowships, Awards, and External Grants}
+\hang Kenneth C. Griffin Economics Research Award, Harvard Economics Department, 2024\par
+\hang Chae Family Economics Research Fund, Harvard Economics Department, 2023\par
+\hang Stone Research Grant, Harvard Kennedy School, 2023\par
+\hang Warburg Prize, Harvard Economics Department, 2022\par
+\hang Linda G. Hammett Ory Fellow, Harvard Graduate School of Education, 2022\par
+\hang James M. and Cathleen D. Stone Scholar in Inequality, Harvard Kennedy School, 2021\par
+\hang NSF Graduate Research Fellowship, 2019\par
+\hang Phi Beta Kappa, Amherst College, 2017\par
+\hang Bernstein Prize in Economics, Amherst College, 2017\par
+\hang James R. Nelson Prize in Economics, Amherst College, 2017\par
+\hang Pedro Grases Prize for Excellence in Spanish, Amherst College, 2017\par
+\hang Samuel Walley Brown Scholarship, Amherst College, 2016\par
+\hang Economics Junior Class Prize, Amherst College, 2016\par
+\hang Academic All-American (Golf), Women's Golf Coaches Assn., 2014, 2015, 2017\par
+\hang Academic All-Conference (Golf), NESCAC, 2014--2017\par
+
+\cvsection{Prior Employment}
+\hang Research Assistant to Amanda Pallais, Harvard, 2020\par
+\hang Predoctoral Fellow for Raj Chetty, John Friedman, \& Nathan Hendren,
+Opportunity Insights, 2017--2019\par
+\hang Research Assistant, Consumer Financial Protection Bureau, Summer 2016\par
+\hang Research Assistant to Caroline Theoharides, Amherst College, 2014--2017\par
+
+\cvsection{Academic Service}
+\hang Referee for \emph{Quarterly Journal of Economics, American Economic Review,
+Review of Economics and Statistics, Journal of Political Economy: Microeconomics,
+Journal of Urban Economics, Education Finance and Policy}\entrygap
+\hang Organizer of the labor/public third-year workshop, Harvard, 2022\par
+\hang Graduate Women in Economics co-chair, Harvard, 2020--2022\par
+
+\cvsection{Clearance}
+\hang Special Sworn Status US Census Bureau\par
+
+\cvsection{Citizenship}
+\hang USA and UK\par
+
+\end{document}
