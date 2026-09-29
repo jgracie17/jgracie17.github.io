@@ -15,7 +15,18 @@
 %  HOW TO BUILD (produces jgracie_CV.pdf in this folder)
 %    pdflatex jgracie_CV.tex   (run twice so the layout settles)
 %    then upload with:  /upload-web cv/jgracie_CV.pdf
+%
+%  VARIANTS
+%    jgracie_CV_ed.tex sets \edtrue and then \input's this file, so all content
+%    stays here.  Wrap variant-specific text in \ifed ... \else ... \fi.
+%    Build with:  pdflatex jgracie_CV_ed.tex   (local only; PDF is gitignored)
 %==============================================================================
+% Variant toggle: define \ifed (default false) unless a wrapper already did.
+% (\csname keeps the \ifed token out of the skipped branch of the \ifx.)
+\expandafter\ifx\csname ifed\endcsname\relax
+  \expandafter\newif\csname ifed\endcsname
+\fi
+
 \documentclass[11pt]{article}
 
 \usepackage[letterpaper,margin=0.9in]{geometry}
@@ -66,7 +77,8 @@
 \raggedright   % left-aligned throughout (standard for CVs; avoids loose lines)
 
 \cvsection{Employment}
-\hang Postdoctoral Fellow, EdRedesign Lab, Harvard University, 2025--\par
+\hang Postdoctoral Fellow, EdRedesign Lab,
+\ifed Harvard Graduate School of Education\else Harvard University\fi, 2025--\par
 
 \cvsection{Affiliations}
 \hang Research Affiliate, Opportunity Insights, 2023--\par
@@ -92,7 +104,8 @@ Low-Income Students'' \coauth{with Benjamin Goldman and Sonya Porter}\entrygap
 \hang Senior Thesis Seminar, Harvard College, Fall 2021--Spring 2022\par
 \hang Econometrics, Amherst College, teaching assistant for Caroline Theoharides, 2017\par
 
-\cvsection{Invited Seminars and Presentations}
+\cvsection{Invited Seminars and Presentations%
+  \ifed\ {\normalsize(including scheduled)}\fi}
 \hang \textit{2026--2027}: NBER Public Economics Fall Meeting\entrygap
 \hang \textit{2025--2026}: AEA Annual Meeting, Fife Applied Microeconomics Conference,
 University of Connecticut, Cornell University, UC Berkeley\par
