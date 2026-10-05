@@ -8,7 +8,7 @@
 %      cleanly indented.  Separate entries with \par.
 %    * Use \entrygap for a blank-line gap between sub-entries; \newline to force
 %      a line break within one entry.
-%    * Co-authors: \coauth{with Benjamin Goldman} keeps the "(with ...)" together
+%    * Co-authors: \coauth{with Benjamin Goldman} keeps the "with ..." together
 %      so it never splits mid-list.
 %    * To add an entry, copy an existing \hang ...\par line and edit the text.
 %
@@ -61,7 +61,7 @@
 % Small indent for degree lines under an institution.
 \newcommand{\sub}{\hspace*{\entryindent}}
 % Co-author list kept as one unbreakable unit (see note above).
-\newcommand{\coauth}[1]{\mbox{(#1)}}
+\newcommand{\coauth}[1]{\mbox{#1}}
 
 \begin{document}
 
@@ -93,7 +93,7 @@ Amherst College\newline
 \cvsection{Publications}
 \hang ``Who Marries Whom? The Role of Segregation by Race and Class''
 \coauth{with Benjamin Goldman and Sonya Porter}\newline
-\textbf{\emph{American Economic Review}} (forthcoming)\par
+\textbf{\emph{American Economic Review}} (2026, lead article)\par
 
 \cvsection{Working Papers}
 \hang ``When Resources Meet Relationships: The Returns to Personalized Supports for
