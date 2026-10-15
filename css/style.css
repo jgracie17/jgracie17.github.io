@@ -129,6 +129,12 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 	color: #333333;
 }
 
+/* Separator between journal/status and coauthors on the same line */
+.meta-dot {
+	margin: 0 6px;
+	color: #999999;
+}
+
 .paper_title {
 	font-size: 14pt;
 	margin-bottom: 5px;
