@@ -4,3 +4,7 @@ markdown: kramdown
 # Keep the CV LaTeX source out of the published site (PDF is served from S3)
 exclude:
   - cv/
+
+# Redirect retired URLs (e.g., old job market page) to current pages
+plugins:
+  - jekyll-redirect-from
