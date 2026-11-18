@@ -11,12 +11,14 @@
 
 	gtag('config', 'G-SCCRK598TV');
 	</script>
-	<body>
+	<body class="{{ page.page_class }}">
 		<div class="container">
 			
 			{% include header.html %}
 			
+			<main id="main-content">
 			{{ content }}
+			</main>
 			
 			{% include footer.html %}
 		

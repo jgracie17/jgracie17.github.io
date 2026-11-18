@@ -1,0 +1,86 @@
+/* Quiet typography and a shared, responsive frame for the academic site. */
+:root { --ink: #252e2a; --muted: #68716b; --green: #275c49; --line: #e0e5df; }
+body { background: #fdfdfb; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.65; padding: 0 0 28px; -webkit-font-smoothing: antialiased; }
+.container { width: 100%; max-width: 1010px; padding: 0 38px; }
+a { color: var(--green); text-underline-offset: 4px; }
+a:hover { color: #153c2e; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 5px; }
+h1, h2, h3 { color: var(--ink); }
+.header { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: 0 0 54px; padding: 36px 0 25px; border-bottom: 1px solid var(--line); text-transform: none; font-family: inherit; }
+.site-name { font-family: Georgia, serif; font-size: 27px; letter-spacing: -.6px; color: var(--ink); }
+.site-name:hover { text-decoration: none; }
+.header nav { display: flex; gap: 30px; font-size: 14px; }
+.header nav a { color: var(--muted); padding: 5px 0; }
+.header nav a[aria-current] { color: var(--green); box-shadow: 0 1px var(--green); }
+.header nav a:hover { text-decoration: none; color: var(--green); }
+.page-heading { margin-bottom: 42px; }
+h1 { font-family: Georgia, serif; font-size: 44px; font-weight: 400; line-height: 1.15; letter-spacing: -1px; margin: 0; }
+.research-page .container { max-width: 850px; }
+.research-page .header { margin-bottom: 32px; }
+/* Section labels sit apart from the papers without enclosing them in cards. */
+.research-section { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; padding: 24px 0 0; border-top: 1px solid var(--line); }
+.research-section:first-child { border-top: 0; padding-top: 0; }
+.research-section h2 { font-family: inherit; font-weight: 500; font-size: 13px; color: var(--muted); margin: 5px 0 24px; }
+.project { margin: 0; padding: 0 0 24px; }
+.project + .project { padding-top: 22px; border-top: 1px solid var(--line); }
+.project p { line-height: 1.6; }
+h3.paper_title { font: 400 20px/1.35 Georgia, serif; letter-spacing: 0; margin: 0 0 9px; }
+.paper_title a { color: var(--ink); }
+.paper_title a:hover { color: var(--green); }
+.coauthors { font-size: 13px; color: var(--muted); margin: 0 0 3px; }
+.publication-status { font-size: 13px; color: var(--green); margin: 0 0 12px; }
+.paper-label { color: var(--green); font-size: 11px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; margin: 0 0 9px; }
+.paper-links { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 10px; font-size: 12px; line-height: 1.6; margin: 8px 0; }
+.links-label { color: var(--muted); padding-top: 1px; }
+.paper-links > div { display: flex; flex-wrap: wrap; column-gap: 15px; row-gap: 5px; }
+.paper-links a { text-decoration: underline; text-decoration-color: #b8c9bf; }
+.coverage-links a { color: #626a65; text-decoration-color: #d2d8d2; }
+.abstract { margin: 15px 0 0; font-size: 14px; line-height: 1.8; color: #4e5851; }
+.abstract summary { width: fit-content; cursor: pointer; font-size: 12px; color: var(--green); }
+.abstract[open] summary { margin-bottom: 14px; }
+.abstract img { border-radius: 2px; }
+/* Keep the homepage close to the original academic photo-and-bio layout. */
+.home-page { background: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #333; }
+.home-page .container { max-width: 850px; }
+.home-page .header { margin-bottom: 32px; }
+.home-page .site-name { font-family: Helvetica, Arial, sans-serif; font-size: 24px; letter-spacing: 1px; text-transform: uppercase; }
+.home-page .header nav, .home-page .footer { font-family: Helvetica, Arial, sans-serif; }
+.home-page .marketing { margin: 32px -15px 48px; padding-left: 0; padding-right: 0; }
+.home-page .marketing p { font-size: 15px; line-height: 1.6; }
+.home-page img.avatar { width: 200px; max-width: 100%; height: auto; margin: 20px 0; border-radius: 0; }
+.footer { margin-top: 30px; padding: 22px 0 0; border-color: var(--line); font-family: inherit; text-transform: none; font-size: 13px; }
+.footer a { color: var(--muted); }
+@media (max-width: 767px) {
+ .container { padding: 0 24px; }
+ .header { padding-top: 24px; margin-bottom: 36px; }
+ .site-name { font-size: 24px; }
+ .header nav { gap: 22px; }
+ .research-section { grid-template-columns: 1fr; gap: 0; padding-top: 22px; }
+ .research-section h2 { margin: 0 0 20px; }
+ .page-heading { margin-bottom: 30px; }
+ h1 { font-size: 37px; }
+ h3.paper_title { font-size: 20px; }
+ .home-page .site-name { font-size: 21px; }
+ .footer .row { display: flex; justify-content: space-between; }
+}
+@media (max-width: 380px) {
+ .container { padding: 0 18px; }
+ .header { gap: 12px; }
+ .header nav { gap: 16px; }
+ .paper-links { grid-template-columns: 1fr; gap: 3px; }
+}
+
+/* Simpler research styling with section labels beside the papers. */
+.research-page { background: #fff; color: #333; }
+.research-page .container { max-width: 820px; }
+.research-page .site-name { font-family: inherit; font-size: 24px; letter-spacing: 0; }
+.research-page .research-section { display: grid; border: 0; padding-top: 12px; }
+.research-page .research-section:first-child { padding-top: 0; }
+.research-page .research-section h2 { font-size: 14px; font-weight: 600; color: #333; margin: 0 0 20px; }
+.research-page h3.paper_title { font-family: inherit; font-size: 18px; font-weight: 500; line-height: 1.45; margin-bottom: 7px; }
+.research-page .project { padding-bottom: 28px; }
+.research-page .project + .project { border: 0; padding-top: 0; }
+.research-page .publication-status { color: var(--green); }
+.research-page .paper-label { font-size: 14px; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--green); margin-bottom: 7px; }
+.research-page .paper-links a { text-decoration: none; }
+.research-page .paper-links a:hover { text-decoration: underline; }
